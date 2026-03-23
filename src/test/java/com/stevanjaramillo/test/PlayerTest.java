@@ -19,7 +19,7 @@ class PlayerTest {
     void tearDown(){
         player = null;
     }
-    /*====================>TEST<=========================*/
+    /*====================>CONSTRUCTORES<=========================*/
     @Test
     void constructorInicializaCampoCorrectamente(){
     assertEquals("Steve",player.getNombre());
