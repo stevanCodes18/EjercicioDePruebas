@@ -1,8 +1,5 @@
 package com.stevanjaramillo.test;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -96,6 +93,11 @@ class PlayerTest {
         player.recibirDanyo(20);
         player.recibirDanyo(10);
         assertEquals(70,player.getVida());
+    }
+
+    @AfterAll
+    static void finalizeAll() {
+        System.out.println("Finalizando PlayerTest");
     }
 
 
