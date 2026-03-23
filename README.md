@@ -16,4 +16,4 @@ Este proyecto contiene las pruebas unitarias realizadas sobre la clase `PlayerTe
 - `@BeforeEach` + `@AfterEach` 
 - En el test del constructor → se usa el player del `@BeforeEach`
 - En todos los tests de `curar` y `recibirDaño` → se crea un `new Player(...)` con la vida inicial necesaria para ese caso concreto
-- Cada test es **100% independiente** (no depende del estado del anterior)
+
