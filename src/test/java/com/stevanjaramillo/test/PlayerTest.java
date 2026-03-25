@@ -39,12 +39,6 @@ class PlayerTest {
         assertThrows(IllegalArgumentException.class, ()->new Player("Steve",105,20));
     }
     @Test
-    void constructorNoPermiteVidaMayorAlMaximo() {
-        assertThrows(IllegalArgumentException.class,
-                () -> new Player("Steve", 150, 20));
-    }
-
-    @Test
     void constructorNoPermiteAtaqueMayorAlMaximo() {
         assertThrows(IllegalArgumentException.class,
                 () -> new Player("Steve", 100, 150));
