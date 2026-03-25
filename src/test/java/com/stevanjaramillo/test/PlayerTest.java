@@ -34,6 +34,21 @@ class PlayerTest {
     void constructorNoPermiteAtaqueNegativo(){
         assertThrows(IllegalArgumentException.class, ()->new Player("Steve",100,-10));
     }
+    @Test
+    void constructorNoPermiteSuperarVidaMaxima(){
+        assertThrows(IllegalArgumentException.class, ()->new Player("Steve",105,20));
+    }
+    @Test
+    void constructorNoPermiteVidaMayorAlMaximo() {
+        assertThrows(IllegalArgumentException.class,
+                () -> new Player("Steve", 150, 20));
+    }
+
+    @Test
+    void constructorNoPermiteAtaqueMayorAlMaximo() {
+        assertThrows(IllegalArgumentException.class,
+                () -> new Player("Steve", 100, 150));
+    }
     //===================>TEST CURAR<==========================
     @Test
     void curarSumaVida(){
@@ -100,6 +115,9 @@ class PlayerTest {
         System.out.println("Finalizando PlayerTest");
     }
 
-
+/*
+* hacer que no supere max tanto de ataque como de vida
+* que 100 en los dos casos
+* */
 
 }
